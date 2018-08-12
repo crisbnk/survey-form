@@ -1,7 +1,7 @@
 :root {
   --main-bg-color: #f7a072;
   --secondary-bg-color: #d9e5d6;
-  --main-font-size: 16px;
+  --main-font-size: 14px;
   --main-font-color: #000000;
   --main-border-color: #00a7e1;
 }
@@ -58,6 +58,10 @@ form .user-field {
   justify-content: flex-start;
   align-items: center;
   margin: 10px 0;
+}
+
+form div.user-field div.selectdiv {
+  width: 100%;
 }
 
 form div.user-field input,
@@ -122,6 +126,11 @@ form .selection-wrapper {
   border: 1px solid var(--main-border-color);
   border-radius: 10px;
   padding: 5px;
+  width: 100%;
+}
+
+form .selection-wrapper div {
+  margin: 5px 0px;
 }
 
 form .button-wrapper {
@@ -154,5 +163,17 @@ form button#submit {
 
   form button#submit {
     width: 100%;
+  }
+
+  form .user-field label {
+    flex-basis: 100%;
+    margin-bottom: 5px;
+  }
+
+  form div.user-field input,
+  form div.user-field div.selectdiv,
+  form div.user-field textarea,
+  form .user-field .selection-wrapper {
+    flex-basis: 100%;
   }
 }
