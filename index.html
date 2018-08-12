@@ -10,188 +10,223 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header>
-      <h1 id="title">SURVEY FORM</h1>
-    </header>
-    <main>
-      <p id="description">
-        Let us know what do you like of Harry Potter series
-      </p>
-      <form id="survey-form">
-        <label id="name-label" for="name">
-          <span class="required">*</span> Name
-        </label>
-        <input id="name" type="text" name="name" value=""
-          placeholder="Enter your name" required>
-        <!-- need email validation with error -->
-        <label id="email-label" for="email">
-          <span class="required">*</span> Email
-        </label>
-        <input id="email" type="email" name="email" value=""
-          placeholder="Enter your email" required>
-        <!-- need number validation with error -->
-        <label id="number-label" for="number">
-          Age
-        </label>
-        <input id="number" type="number" name="number" value=""
-          min="0" max="150" placeholder="Age">
-        <label id="dropdown-label" for="dropdown">
-          Select your favourite Harry Potter series character
-        </label>
-        <select id="dropdown">
-          <option value="">--Please choose an option--</option>
-          <option value="harry">Harry Potter</option>
-          <option value="ron">Ron Weasley</option>
-          <option value="hermione">Hermione Granger</option>
-          <option value="voldemort">Lord Voldemort</option>
-          <option value="albus">Albus Dumbledore</option>
-          <option value="severus">Severus Snape</option>
-          <option value="hagrid">Rubeus Hagrid</option>
-          <option value="draco">Draco Malfoy</option>
-          <option value="ginny">Ginny Weasley</option>
-          <option value="other">Other</option>
-        </select>
-        <fieldset>
-          <legend>Select your Hogwarts house</legend>
-          <div>
-            <input type="radio" id="gryffindor" value="gryffindor" name="house" checked />
-            <label for="gryffindor">Gryffindor</label>
-          </div>
-          <div>
-            <input type="radio" id="hufflepuff" value="hufflepuff" name="house" />
-            <label for="hufflepuff">Hufflepuff</label>
-          </div>
-          <div>
-            <input type="radio" id="ravenclaw" value="ravenclaw" name="house" />
-            <label for="ravenclaw">Ravenclaw</label>
-          </div>
-          <div>
-            <input type="radio" id="slytherin" value="slytherin" name="house" />
-            <label for="slytherin">Slytherin</label>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>Choose your favourite books</legend>
-          <div>
-            <input type="checkbox" id="philosopher" name="book"
-                   value="philosopher" />
-            <label for="philosopher">
-              Harry Potter and the Philosopher's Stone
+    <div class="wrapper">
+      <header>
+        <h1 id="title">SURVEY FORM</h1>
+      </header>
+      <main>
+        <p id="description">
+          Let us know what you think of Harry Potter series
+        </p>
+        <form id="survey-form">
+          <div class="user-field">
+            <label id="name-label" class="text-description" for="name">
+              <span class="required">*</span> Name
             </label>
+            <input id="name" type="text" name="name" value=""
+            placeholder="Enter your name" required>
           </div>
-          <div>
-            <input type="checkbox" id="chamber" name="book"
-                   value="chamber" />
-            <label for="chamber">
-              Harry Potter and the Chamber of Secrets
+          <div class="user-field">
+            <label id="email-label" class="text-description" for="email">
+              <span class="required">*</span> Email
             </label>
+            <input id="email" type="email" name="email" value=""
+            placeholder="Enter your email" required>
           </div>
-          <div>
-            <input type="checkbox" id="azkaban" name="book"
-                   value="azkaban" />
-            <label for="azkaban">
-              Harry Potter and the Prisoner of Azkaban
+          <div class="user-field">
+            <label id="number-label" class="text-description" for="number">
+              Age
             </label>
+            <input id="number" type="number" name="number" value=""
+            min="0" max="150" placeholder="Age">
           </div>
-          <div>
-            <input type="checkbox" id="goblet" name="book"
-                   value="goblet" />
-            <label for="goblet">
-              Harry Potter and the Goblet of Fire
+          <div class="user-field">
+            <label id="dropdown-label" class="text-description" for="dropdown">
+              Select your favourite Harry Potter series character
             </label>
+            <div class="selectdiv">
+              <select id="dropdown">
+                <option value="">--Please choose an option--</option>
+                <option value="harry">Harry Potter</option>
+                <option value="ron">Ron Weasley</option>
+                <option value="hermione">Hermione Granger</option>
+                <option value="voldemort">Lord Voldemort</option>
+                <option value="albus">Albus Dumbledore</option>
+                <option value="severus">Severus Snape</option>
+                <option value="hagrid">Rubeus Hagrid</option>
+                <option value="draco">Draco Malfoy</option>
+                <option value="ginny">Ginny Weasley</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
           </div>
-          <div>
-            <input type="checkbox" id="phoenix" name="book"
-                   value="phoenix" />
-            <label for="phoenix">
-              Harry Potter and the Order of the Phoenix
+          <fieldset class="user-field">
+            <legend>Select your favourite Hogwarts house</legend>
+            <label class="text-description" for="houses">
+              Select your Hogwarts house
             </label>
-          </div>
-          <div>
-            <input type="checkbox" id="half-blood" name="book"
-                   value="half-blood" />
-            <label for="half-blood">
-              Harry Potter and the Half-Blood Prince
+            <div id="houses" class="selection-wrapper">
+              <div>
+                <input type="radio" id="gryffindor"
+                  value="gryffindor" name="house" checked />
+                <label for="gryffindor">Gryffindor</label>
+              </div>
+              <div>
+                <input type="radio" id="hufflepuff"
+                value="hufflepuff" name="house" />
+                <label for="hufflepuff">Hufflepuff</label>
+              </div>
+              <div>
+                <input type="radio" id="ravenclaw"
+                value="ravenclaw" name="house" />
+                <label for="ravenclaw">Ravenclaw</label>
+              </div>
+              <div>
+                <input type="radio" id="slytherin"
+                value="slytherin" name="house" />
+                <label for="slytherin">Slytherin</label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="user-field">
+            <legend>Choose your favourite Harry Potter books</legend>
+            <label class="text-description" for="books">
+              Choose your favourite Harry Potter books
             </label>
-          </div>
-          <div>
-            <input type="checkbox" id="hallows" name="book"
-                   value="hallows" />
-            <label for="hallows">
-              Harry Potter and the Deathly Hallows
+            <div id="books" class="selection-wrapper">
+              <div>
+                <input type="checkbox" id="philosopher" name="book"
+                value="philosopher" />
+                <label for="philosopher">
+                  Harry Potter and the Philosopher's Stone
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="chamber" name="book"
+                value="chamber" />
+                <label for="chamber">
+                  Harry Potter and the Chamber of Secrets
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="azkaban" name="book"
+                value="azkaban" />
+                <label for="azkaban">
+                  Harry Potter and the Prisoner of Azkaban
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="goblet" name="book"
+                value="goblet" />
+                <label for="goblet">
+                  Harry Potter and the Goblet of Fire
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="phoenix" name="book"
+                value="phoenix" />
+                <label for="phoenix">
+                  Harry Potter and the Order of the Phoenix
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="half-blood" name="book"
+                value="half-blood" />
+                <label for="half-blood">
+                  Harry Potter and the Half-Blood Prince
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="hallows" name="book"
+                value="hallows" />
+                <label for="hallows">
+                  Harry Potter and the Deathly Hallows
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="user-field">
+            <legend>Choose your favourite Harry Potter movies</legend>
+            <label class="text-description" for="movies">
+              Choose your favourite Harry Potter movies
             </label>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>Choose your favourite movies</legend>
-          <div>
-            <input type="checkbox" id="m-philosopher" name="movie"
-                   value="m-philosopher" />
-            <label for="m-philosopher">
-              Harry Potter and the Philosopher's Stone
+            <div id="movies" class="selection-wrapper">
+              <div>
+                <input type="checkbox" id="m-philosopher" name="movie"
+                value="m-philosopher" />
+                <label for="m-philosopher">
+                  Harry Potter and the Philosopher's Stone
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="m-chamber" name="movie"
+                value="m-chamber" />
+                <label for="m-chamber">
+                  Harry Potter and the Chamber of Secrets
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="m-azkaban" name="movie"
+                value="m-azkaban" />
+                <label for="m-azkaban">
+                  Harry Potter and the Prisoner of Azkaban
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="m-goblet" name="movie"
+                value="m-goblet" />
+                <label for="m-goblet">
+                  Harry Potter and the Goblet of Fire
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="m-phoenix" name="movie"
+                value="m-phoenix" />
+                <label for="m-phoenix">
+                  Harry Potter and the Order of the Phoenix
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="m-half-blood" name="movie"
+                value="m-half-blood" />
+                <label for="m-half-blood">
+                  Harry Potter and the Half-Blood Prince
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="m-hallows-first" name="movie"
+                value="m-hallows-first" />
+                <label for="m-hallows-first">
+                  Harry Potter and the Deathly Hallows – Part 1
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="m-hallows-second" name="movie"
+                value="m-hallows-second" />
+                <label for="m-hallows-second">
+                  Harry Potter and the Deathly Hallows – Part 2
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <div class="user-field">
+            <label class="text-description" for="textarea">
+              Why do you like Harry Potter series?
             </label>
+            <textarea id="textarea"
+              name="textarea" rows="10" cols="50"
+              placeholder="I like Harry Potter series because..."></textarea>
           </div>
-          <div>
-            <input type="checkbox" id="m-chamber" name="movie"
-                   value="m-chamber" />
-            <label for="m-chamber">
-              Harry Potter and the Chamber of Secrets
-            </label>
+          <div class="button-wrapper">
+            <button id="submit" type="submit" name="submit">SUBMIT</button>
           </div>
-          <div>
-            <input type="checkbox" id="m-azkaban" name="movie"
-                   value="m-azkaban" />
-            <label for="m-azkaban">
-              Harry Potter and the Prisoner of Azkaban
-            </label>
-          </div>
-          <div>
-            <input type="checkbox" id="m-goblet" name="movie"
-                   value="m-goblet" />
-            <label for="m-goblet">
-              Harry Potter and the Goblet of Fire
-            </label>
-          </div>
-          <div>
-            <input type="checkbox" id="m-phoenix" name="movie"
-                   value="m-phoenix" />
-            <label for="m-phoenix">
-              Harry Potter and the Order of the Phoenix
-            </label>
-          </div>
-          <div>
-            <input type="checkbox" id="m-half-blood" name="movie"
-                   value="m-half-blood" />
-            <label for="m-half-blood">
-              Harry Potter and the Half-Blood Prince
-            </label>
-          </div>
-          <div>
-            <input type="checkbox" id="m-hallows-first" name="movie"
-                   value="m-hallows-first" />
-            <label for="m-hallows-first">
-              Harry Potter and the Deathly Hallows – Part 1
-            </label>
-          </div>
-          <div>
-            <input type="checkbox" id="m-hallows-second" name="movie"
-                   value="m-hallows-second" />
-            <label for="m-hallows-second">
-              Harry Potter and the Deathly Hallows – Part 2
-            </label>
-          </div>
-        </fieldset>
-        <p><span class="required">*</span> Required field</p>
-        <label for="textarea">Why do you like Harry Potter series?</label>
-        <textarea id="textarea" name="textarea" rows="10" cols="50">
-          Write something here
-        </textarea>
-        <button id="submit" type="submit" name="submit">SUBMIT</button>
-      </form>
-    </main>
-    <footer>
-      <p>2018 CRISBNK</p>
-    </footer>
+          <p><span class="required">*</span> Required field</p>
+        </form>
+      </main>
+      <footer>
+        <p>2018 - CRISBNK</p>
+      </footer>
+    </div>
     <script
       type="text/javascript"
       src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">

@@ -1,11 +1,158 @@
+:root {
+  --main-bg-color: #f7a072;
+  --secondary-bg-color: #d9e5d6;
+  --main-font-size: 16px;
+  --main-font-color: #000000;
+  --main-border-color: #00a7e1;
+}
+
 body {
   font-family: 'Josefin Slab', serif;
+  font-size: var(--main-font-size);
+  color: var(--main-font-color);
+  background-color: var(--main-bg-color);
+  margin: 0px;
+  padding: 0px;
+}
+
+.wrapper {
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  margin: 0px 10%;
+  padding: 3%;
+  background-color: var(--secondary-bg-color);
+  border: 3px solid var(--main-border-color);
+  border-radius: 25px;
+}
+
+footer {
+  text-align: center;
+  background-color: brown:
 }
 
 h1 {
   font-family: 'Fredericka the Great', cursive;
 }
 
-header {
-  text-align: center;
+#description {
+  border-bottom: 2px solid var(--main-border-color);
+  padding: 10px 0;
+  font-style: italic;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form .user-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px 0;
+}
+
+form div.user-field input,
+form div.user-field div.selectdiv select#dropdown,
+form div.user-field textarea {
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid var(--main-border-color);
+  padding: 5px 0px;
+  font-family: 'Josefin Slab', serif;
+  font-size: var(--main-font-size);
+  width: 100%;
+  text-indent: 10px;
+}
+
+form div.user-field div.selectdiv select#dropdown {
+  height: 42px;
+}
+
+.selectdiv select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+form div.user-field textarea {
+  height: 142px;
+}
+
+form .text-description {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+form .user-field label {
+  flex-basis: 30%;
+  margin-bottom: 5px;
+}
+
+form div.user-field input,
+form div.user-field div.selectdiv,
+form div.user-field textarea,
+form .user-field .selection-wrapper {
+  flex-basis: 70%;
+}
+
+form fieldset {
+  border: none;
+  padding: 0px;
+  margin-left: 0px;
+  display: flex;
+  flex-direction: row;
+}
+
+fieldset legend {
+  position:absolute;
+  left: -5000px;
+}
+
+form .selection-wrapper {
+  background-color: #ffffff;
+  border: 1px solid var(--main-border-color);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+form .button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid var(--main-border-color);
+  margin: 10px 0;
+}
+
+form button#submit {
+  margin: 10px 0;
+  width: 30%;
+  height: 42px;
+  background: var(--main-border-color);
+  border: 3px solid var(--main-border-color);
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  form .user-field {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  form .user-field .selection-wrapper {
+    margin: 0 auto;
+  }
+
+  form button#submit {
+    width: 100%;
+  }
 }
